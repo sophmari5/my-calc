@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Calculadora</title>
     <meta charset="utf-8" />
-  </head>
-  <body onkeypress="manipularTeclado()">
-      <table>
-          <tr>
-              <td colspan="6"><input type="text" id="display" value="0" disabled></td>
-          </tr>
-          <tr>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body onkeypress="manipularTeclado()">
+    <table>
+        <tr>
+            <td colspan="6"><input type="text" id="display" value="0" disabled></td>
+        </tr>
+        <tr>
             <td><input type="button" value="7" onclick="atualizarDisplay(this)" /></td>
             <td><input type="button" value="8" onclick="atualizarDisplay(this)" /></td>
             <td><input type="button" value="9" onclick="atualizarDisplay(this)" /></td>
@@ -33,41 +36,11 @@
             <td><input type="button" value="=" onclick="calcularOperacao()" /></td>
             <td><input type="button" value="/" onclick="atualizarOperacao(this)" /></td>
         </tr>
-      </table>
-      <script>
-        function atualizarDisplay(btn){
-            const display = document.getElementById('display');
-            if(display.value.length === 9) return;
-            if(display.value === '0') display.value = btn.value;
-            else display.value += btn.value;
-        }
+    </table>
 
-        function limparDisplay(){
-            document.getElementById('display').value = '0';
-        }
+    <script src="js/calc_functions.js"></script>
+    <img src="img/dog.jpg" alt="Dog" />
 
-        var operador = ''
-        var valor1 = 0
-        function atualizarOperacao(btn){
-            const display = document.getElementById('display');
-            operador = btn.value;
-            valor1 = parseInt(display.value);
-            display.value = '0';
-        }
+</body>
 
-        function calcularOperacao(){
-            const display = document.getElementById('display');
-            const valor2 = parseInt(display.value);
-            valor1 = eval(valor1+operador+valor2);
-            display.value = valor1;
-            operador = '';
-        }       
-
-        function manipularTeclado(){
-            if(/[0-9]/.test(event.key))
-                atualizarDisplay({value: event.key});
-        }
-    </script>
-
-  </body>
 </html>
