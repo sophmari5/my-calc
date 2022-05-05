@@ -8,6 +8,7 @@
 </head>
 
 <body onkeypress="manipularTeclado()">
+    <h1> sophia </h1>
     <table>
         <tr>
             <td colspan="6"><input type="text" id="display" value="0" disabled></td>
@@ -16,25 +17,29 @@
             <td><input type="button" class = "botao" value="7" onclick="atualizarDisplay(this)" /></td>
             <td><input type="button" class = "botao" value="8" onclick="atualizarDisplay(this)" /></td>
             <td><input type="button" class = "botao" value="9" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" class = "botao" value="*" onclick="atualizarOperacao(this)" /></td>
+            <td><input type="button" class = "botao" value="*" operacao="*" onclick="atualizarOperacao(this)" /></td>
+            <td><input type="button" class = "botao" value="√" onclick="atualizarOperacao(this)" /></td>
         </tr>
         <tr>
             <td><input type="button" class = "botao" value="4" onclick="atualizarDisplay(this)" /></td>
             <td><input type="button" class = "botao" value="5" onclick="atualizarDisplay(this)" /></td>
             <td><input type="button" class = "botao" value="6" onclick="atualizarDisplay(this)" /></td>
             <td><input type="button" class = "botao" value="-" onclick="atualizarOperacao(this)" /></td>
+            <td><input type="button" class = "botao" value="^" operacao="**" onclick="atualizarOperacao(this)" /></td>
         </tr>
         <tr>
             <td><input type="button" class = "botao" value="1" onclick="atualizarDisplay(this)" /></td>
             <td><input type="button" class = "botao" value="2" onclick="atualizarDisplay(this)" /></td>
             <td><input type="button" class = "botao" value="3" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" class = "botao" value="+" onclick="atualizarOperacao(this)" /></td>
+            <td><input type="button" class = "botao" value="+" operacao="+" onclick="atualizarOperacao(this)" /></td>
+            <td><input type="button" class = "parentese" value="( )" onclick="atualizarDisplay(this)" /></td>
         </tr>
         <tr>
             <td><input type="button" class = "botao" value="C" onclick="limparDisplay()" /></td>
             <td><input type="button" class = "botao" value="0" onclick="atualizarDisplay(this)" /></td>
             <td><input type="button" class = "botao" value="=" onclick="calcularOperacao()" /></td>
-            <td><input type="button" class = "botao" value="/" onclick="atualizarOperacao(this)" /></td>
+            <td><input type="button" class = "botao" value="/" operacao= "/"onclick="atualizarOperacao(this)" /></td>
+            <td><input type="button" class = "botao" value="." onclick="atualizarDisplay(this)" /></td>
         </tr>
     </table>
 
