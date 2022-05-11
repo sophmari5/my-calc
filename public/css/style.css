@@ -1,7 +1,7 @@
 body { background-color: rgb(36, 153, 231); }
 
 table{
-    background-image: url("nemoemo.jpg");
+    background-image: url(../img/nemoemo.jpg);
     border: 2px solid rgb(173, 16, 179);
     padding: 15px 32px;
     text-align: center;
