@@ -1,6 +1,6 @@
 function atualizarDisplay(btn){
     const display = document.getElementById('display');
-    if(display.value.length === 9) return;
+    if(display.value.length === 20) return;
     if(display.value === '0') display.value = btn.value;
     else display.value += btn.value;
 }
@@ -14,14 +14,11 @@ var valor1 = 0
 function atualizarOperacao(btn){
     const display = document.getElementById('display');
     operador = btn.getAttribute("operacao");
-    valor1 = parseFloat(display.value);
-    display.value = '0';
 }
 
 function calcularOperacao(){
     const display = document.getElementById('display');
-    const valor2 = parseFloat(display.value);
-    valor1 = eval(valor1+operador+valor2);
+    valor1 = eval(display.value);
     display.value = valor1;
     operador = '';
 }       
