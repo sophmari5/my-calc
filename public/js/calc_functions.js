@@ -9,18 +9,16 @@ function limparDisplay(){
     document.getElementById('display').value = '0';
 }
 
-var operador = ''
 var valor1 = 0
 function atualizarOperacao(btn){
     const display = document.getElementById('display');
-    operador = btn.getAttribute("operacao");
+    atualizarDisplay(btn);
 }
 
 function calcularOperacao(){
     const display = document.getElementById('display');
     valor1 = eval(display.value);
-    display.value = valor1;
-    operador = '';
+    display.value=valor1;
 }       
 
 function manipularTeclado(){
